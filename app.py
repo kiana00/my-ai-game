@@ -1,4 +1,25 @@
-import streamlit as st
+# --- کد CSS برای افزودن پس زمینه به کل صفحه ---
+def set_background_style(image_url):
+    st.markdown(
+        f"""
+        <style>
+        .stApp {{
+            background-image: url("{image_url}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+# ⚠️ اینجا آدرس عکس خود را جایگزین کنید:
+BACKGROUND_IMAGE_URL = "https://i.imgur.com/your-fantasy-image-url.jpg" 
+# یک آدرس تصویر مناسب بگذارید
+set_background_style(https://cdn.honarechehre.ir/images/f7f5c670-a23a-11ef-a046-2bbf2a900dfa.webp)
+# ----------------------------------------import streamlit as st
 import google.generativeai as genai
 
 # --- 1. تنظیمات صفحه ---
@@ -68,4 +89,5 @@ if prompt := st.chat_input("پیام خود را بنویسید..."):
                 st.markdown(response.text)
                 st.session_state.messages.append({"role": "assistant", "content": response.text})
             except Exception as e:
+
                 st.error(f"خطا: {e}")
