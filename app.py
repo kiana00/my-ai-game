@@ -16,7 +16,7 @@ def set_background_style(image_url):
     )
 
 # ⚠️ اینجا آدرس عکس خود را جایگزین کنید:
-BACKGROUND_IMAGE_URL = "https://i.imgur.com/your-fantasy-image-url.jpg" 
+BACKGROUND_IMAGE_URL = "img1.taw-bio.ir/2024/229313/1klrk2v8.jpeg" 
 # یک آدرس تصویر مناسب بگذارید
 set_background_style(https://cdn.honarechehre.ir/images/f7f5c670-a23a-11ef-a046-2bbf2a900dfa.webp)
 # ----------------------------------------import streamlit as st
@@ -91,3 +91,4 @@ if prompt := st.chat_input("پیام خود را بنویسید..."):
             except Exception as e:
 
                 st.error(f"خطا: {e}")
+
